@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Terminal - Advanced Intelligence Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Matrix Background Effect -->
+    <div class="matrix-bg" id="matrix-bg"></div>
+    
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-terminal"></i>
+                <span class="logo-text">OSINT<span class="accent">TERMINAL</span></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#tools" class="nav-link" data-section="tools">
+                    <i class="fas fa-tools"></i> Tools
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1 class="cyber-title">
+                            <span class="glitch" data-text="ADVANCED OSINT">ADVANCED OSINT</span>
+                            <span class="subtitle">Intelligence Platform</span>
+                        </h1>
+                        <p class="hero-description">
+                            Professional-grade Open Source Intelligence tools for digital investigations, 
+                            reconnaissance, and data analysis. Access powerful APIs through a sleek cyber interface.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">OSINT Tools</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">Investigations</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Available</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="cyber-btn primary" onclick="showSection('tools')">
+                                <i class="fas fa-rocket"></i> Start Investigation
+                            </button>
+                            <button class="cyber-btn secondary" onclick="scrollToTools()">
+                                <i class="fas fa-search"></i> Explore Tools
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="terminal-title">osint@terminal:~$</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">root@osint:~#</span>
+                                    <span class="command typing-animation">./investigate --target=unknown --depth=maximum</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output">Initializing OSINT protocols...</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output success">✓ Phone Intelligence: ACTIVE</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output success">✓ IP Geolocation: ACTIVE</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output success">✓ Email Analysis: ACTIVE</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output success">✓ Username Scanner: ACTIVE</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">root@osint:~#</span>
+                                    <span class="cursor">_</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-tools"></i>
+                        Intelligence Toolkit
+                    </h2>
+                    <p class="section-subtitle">Advanced OSINT capabilities at your fingertips</p>
+                </div>
+
+                <div class="tools-grid">
+                    <!-- Phone Lookup Tool -->
+                    <div class="tool-card" data-tool="phone">
+                        <div class="tool-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="tool-title">Phone Intelligence</h3>
+                        <p class="tool-description">Advanced phone number analysis and tracing capabilities</p>
+                        <div class="tool-features">
+                            <span class="feature">Carrier Detection</span>
+                            <span class="feature">Location Mapping</span>
+                            <span class="feature">Owner Intelligence</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('phone')">
+                            <i class="fas fa-search"></i> Investigate
+                        </button>
+                    </div>
+
+                    <!-- IP Lookup Tool -->
+                    <div class="tool-card" data-tool="ip">
+                        <div class="tool-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="tool-title">IP Geolocation</h3>
+                        <p class="tool-description">Comprehensive IP address analysis and threat detection</p>
+                        <div class="tool-features">
+                            <span class="feature">ISP Analysis</span>
+                            <span class="feature">Threat Detection</span>
+                            <span class="feature">Proxy/VPN ID</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('ip')">
+                            <i class="fas fa-search"></i> Analyze
+                        </button>
+                    </div>
+
+                    <!-- Email OSINT Tool -->
+                    <div class="tool-card" data-tool="email">
+                        <div class="tool-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="tool-title">Email Intelligence</h3>
+                        <p class="tool-description">Deep email analysis with breach database integration</p>
+                        <div class="tool-features">
+                            <span class="feature">Breach Detection</span>
+                            <span class="feature">Social Discovery</span>
+                            <span class="feature">Domain Analysis</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('email')">
+                            <i class="fas fa-search"></i> Investigate
+                        </button>
+                    </div>
+
+                    <!-- Vehicle Lookup Tool -->
+                    <div class="tool-card" data-tool="vehicle">
+                        <div class="tool-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="tool-title">Vehicle Intelligence</h3>
+                        <p class="tool-description">Vehicle registration and ownership information</p>
+                        <div class="tool-features">
+                            <span class="feature">Registration Data</span>
+                            <span class="feature">Owner Details</span>
+                            <span class="feature">RTO Information</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('vehicle')">
+                            <i class="fas fa-search"></i> Lookup
+                        </button>
+                    </div>
+
+                    <!-- Username Scanner Tool -->
+                    <div class="tool-card" data-tool="username">
+                        <div class="tool-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3 class="tool-title">Username Scanner</h3>
+                        <p class="tool-description">Scan 50+ platforms for username availability and profiles</p>
+                        <div class="tool-features">
+                            <span class="feature">50+ Platforms</span>
+                            <span class="feature">Real-time Scan</span>
+                            <span class="feature">Profile Detection</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('username')">
+                            <i class="fas fa-search"></i> Scan
+                        </button>
+                    </div>
+
+                    <!-- IFSC Lookup Tool -->
+                    <div class="tool-card" data-tool="ifsc">
+                        <div class="tool-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="tool-title">Bank Intelligence</h3>
+                        <p class="tool-description">IFSC code analysis and bank branch information</p>
+                        <div class="tool-features">
+                            <span class="feature">Branch Details</span>
+                            <span class="feature">Contact Info</span>
+                            <span class="feature">Location Data</span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('ifsc')">
+                            <i class="fas fa-search"></i> Lookup
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        About OSINT Terminal
+                    </h2>
+                    <p class="section-subtitle">Professional intelligence gathering platform</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Advanced Open Source Intelligence</h3>
+                        <p>
+                            OSINT Terminal is a comprehensive platform for digital investigations and intelligence gathering.
+                            Our tools provide researchers, security professionals, and investigators with powerful capabilities
+                            for analyzing digital footprints and conducting thorough reconnaissance.
+                        </p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Secure & Anonymous</h4>
+                                    <p>All investigations are conducted anonymously with enterprise-grade security</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <h4>Real-time Results</h4>
+                                    <p>Get instant results from multiple data sources and intelligence feeds</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Advanced Analytics</h4>
+                                    <p>Comprehensive data analysis with detailed reporting and visualization</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="disclaimer">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Legal Notice:</strong> This platform is designed for legitimate OSINT research, 
+                            security testing, and educational purposes only. Users must comply with all applicable 
+                            laws and regulations.
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="stats-panel">
+                            <div class="panel-header">
+                                <i class="fas fa-chart-bar"></i>
+                                System Statistics
+                            </div>
+                            <div class="panel-body">
+                                <div class="stat-row">
+                                    <span class="stat-label">API Endpoints</span>
+                                    <span class="stat-value">20+</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Data Sources</span>
+                                    <span class="stat-value">50+</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Accuracy Rate</span>
+                                    <span class="stat-value">95%</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Response Time</span>
+                                    <span class="stat-value">&lt;2s</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Uptime</span>
+                                    <span class="stat-value">99.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tool Modal -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label id="inputLabel" for="investigationInput"></label>
+                        <div class="input-wrapper">
+                            <input type="text" id="investigationInput" placeholder="" autocomplete="off">
+                            <button class="input-btn" onclick="startInvestigation()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-section" id="resultsSection" style="display: none;">
+                    <div class="results-header">
+                        <h4><i class="fas fa-chart-line"></i> Investigation Results</h4>
+                    </div>
+                    <div class="results-content" id="resultsContent">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+
+                <div class="loading-section" id="loadingSection" style="display: none;">
+                    <div class="loading-animation">
+                        <div class="scanning-line"></div>
+                        <div class="loading-text">
+                            <span id="loadingText">Initializing investigation...</span>
+                        </div>
+                        <div class="loading-progress">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>OSINT Terminal</h4>
+                    <p>Advanced intelligence platform for digital investigations and reconnaissance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#" onclick="openTool('phone')">Phone Intelligence</a></li>
+                        <li><a href="#" onclick="openTool('ip')">IP Geolocation</a></li>
+                        <li><a href="#" onclick="openTool('email')">Email Analysis</a></li>
+                        <li><a href="#" onclick="openTool('username')">Username Scanner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#tools">Documentation</a></li>
+                        <li><a href="#tools">API Reference</a></li>
+                        <li><a href="#about">Legal Notice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OSINT Terminal. For educational and legitimate research purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
