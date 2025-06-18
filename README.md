@@ -78,7 +78,7 @@ A professional-grade OSINT (Open Source Intelligence) platform that provides rea
    git add .
    git commit -m "Initial OSINT Terminal deployment"
    git branch -M main
-   git remote add origin https://github.com/yourusername/osint-terminal.git
+   git remote add origin https://github.com/maheshapurvaitsolutions/osint-intelligence-platform.git
    git push -u origin main
    ```
 
@@ -96,8 +96,8 @@ A professional-grade OSINT (Open Source Intelligence) platform that provides rea
 ### Local Development
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/osint-terminal.git
-cd osint-terminal
+git clone https://github.com/maheshapurvaitsolutions/osint-intelligence-platform.git
+cd osint-intelligent-platform
 
 # Serve locally (Python)
 python -m http.server 8000
